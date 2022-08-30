@@ -7,7 +7,7 @@ BackEnd of the FaceApp application developed as part of a study on facial recogn
 * [Face manipulation API](#face-manipulation-api)
 * [Mongodb](#mongodb)
 * [Docker-compose](#docker-compose)
-
+* [Technologies](#technologies)
 
 ## Celebrity classification API
 Python version > 3.8.
@@ -38,7 +38,7 @@ $ sudo docker run -it --rm -p 5001:5001 -e NUMBER_PROCESSES=10 -e NUMBER_THREADS
 ## Face manipulation API
 Python version = 3.7
 
-This API generates face manipulation videos using [First Order Model for Image Animation github](https://github.com/AliaksandrSiarohin/first-order-model). After cloning the previous github, you must download checkpoints using this [link](https://drive.google.com/drive/folders/1PyQJmkdCsAkOYwUyaj_l-l0as-iLDgeH). In this project, we used the checkpoint nammed "vox-cpk.pth.tar". Then, install all the requirements as well as face-allignement library as follows:
+This API generates face manipulation videos using First Order Model for Image Animation [github](https://github.com/AliaksandrSiarohin/first-order-model). After cloning the previous github, you must download checkpoints using this [link](https://drive.google.com/drive/folders/1PyQJmkdCsAkOYwUyaj_l-l0as-iLDgeH). In this project, we used the checkpoint nammed "vox-cpk.pth.tar". Then, install all the requirements as well as face-allignement library as follows:
 ```
 $ git clone https://github.com/1adrianb/face-alignment
 $ cd face-alignment
@@ -73,4 +73,25 @@ $ cd webcam
 $ sudo docker-compose up
 ```
 
-## 
+## Technologies
+* Except face manipulation API, all the APIs can be run using the normal version of Docker. But for face manipulation API, you have to install [docker-nvidia](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) if you are working on linux. For Windows 11 users, you can refer to this [link](https://docs.nvidia.com/cuda/wsl-user-guide/index.html). 
+
+* For each API, it is better to use virtual environment. You can either use pycharm to create it directly or command lines as follows:
+
+```
+$ python -m venv c:\path\to\myenv
+```
+To activate it on windows, use:
+
+```
+$ myenv\Scripts\activate.bat
+```
+To activate it on Unix or MacOS, run:
+
+```
+$ source myenv/bin/activate
+```
+To deactivate it, run:
+```
+$ deactivate
+```
