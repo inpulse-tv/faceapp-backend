@@ -1,10 +1,10 @@
 # faceapp-backend
 BackEnd of the FaceApp application developed as part of a study on facial recognition and Deep Fake.
 
-## Table de matière
-* [Celebrity classification API](#celebrity-classification)
-* [Face morphing API](#face-morphing)
-* [Face manipulation API](#face-manipulation)
+## Table of contents
+* [Celebrity classification API](#celebrity-classification-api)
+* [Face morphing API](#face-morphing-api)
+* [Face manipulation API](#face-manipulation-api)
 * [Mongodb](#mongodb)
 * [Docker-compose](#docker-compose)
 
@@ -72,3 +72,5 @@ The commands for running docker-compose are:
 $ cd webcam
 $ sudo docker-compose up
 ```
+
+## 
