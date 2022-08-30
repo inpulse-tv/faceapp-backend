@@ -10,11 +10,11 @@ BackEnd of the FaceApp application developed as part of a study on facial recogn
 * [Technologies](#technologies)
 
 ## Celebrity classification API
-Python version > 3.8.
+Python version > 3.8
 
 This API return the most similar celebrity to the user. It uses FaceNet model and a saved SVM classifier. You can refer to the "celeb_class_api" directory if you want to test. You can also retrain the model on your own dataset using the notebook "facenet.ipynb" in the "notebooks" directory. 
 
-In addition, You can create Docker image using the Dockerfile in the "celeb_class_api" directory.  You can use these commands:
+In addition, You can create and run Docker image using the Dockerfile in the "celeb_class_api" directory.  You can use these commands:
 
 ```
 $ cd celeb_class_api
@@ -26,8 +26,9 @@ After training the model on your own dataset, replace the path "../../../mnt/d/b
 ## Face morphing API
 Python version = 3.7 or 3.6
 
-By employing the SimSwap model, this API manages to merge two faces. To use it, you can refer to the "simswap_api" directory. You should at first clone the [SimSwap github](https://github.com/neuralchen/SimSwap). Next, you must prepare the evironment and install the different pre-trained models. All the steps are given in [this link](https://github.com/neuralchen/SimSwap/blob/main/docs/guidance/preparation.md). Finally, add the file given in the "simswap_api" folder and install requirements. You can either start the API through the "uwsfi_simswap.sh" script.
+By employing the SimSwap model, this API manages to merge two faces. To use it, you can refer to the "simswap_api" directory. You should at first clone the [SimSwap github](https://github.com/neuralchen/SimSwap). Next, you must prepare the evironment and install the different pre-trained models. All the steps are given in [this link](https://github.com/neuralchen/SimSwap/blob/main/docs/guidance/preparation.md). Finally, add the file given in the "simswap_api" folder and install requirements. In addition, you must install other modules related to the API implementation: flask, uwsgi.
 
+You can start the API through the "uwsgi_simswap.sh" script.
 If you find problems with the dependicies, you can run the API as a Docker image through the following commands:
 
 ```
@@ -46,7 +47,7 @@ $ pip install -r requirements.txt
 $ python setup.py install
 ```
 
-You can also launch the API using Docker as follows:
+You can launch the API using either "gunicorn_fom.sh" script or Docker as follows:
 
 ```
 $ cd fom_api
