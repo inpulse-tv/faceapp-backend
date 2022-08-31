@@ -21,7 +21,7 @@ $ cd celeb_class_api
 $ sudo docker build -t celeb_class_api:2.0 .
 $ sudo docker run -it --rm -p 5002:5002 -v ../../../mnt/d/big_dataset/Train:/app/volume -e NUMBER_WORKERS=10 -e NUMBER_THREADS=4 celeb_class_api:2.0
 ```
-After training the model on your own dataset, replace the path "../../../mnt/d/big_dataset/Train" with the path of your dataset.
+Replace "../../../mnt/d/big_dataset/Train" with your own path in this command lines as well as in the docker-compose.
 
 ## Face morphing API
 Python version = 3.7 or 3.6
